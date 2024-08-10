@@ -32,17 +32,15 @@
 1. Create a simple module in file h4.move which should be in the sources directory. You can use the code from this gist (Change the module address to be your account address):
     ```move
     module 0xcafe::h4 {
-
-    struct MyData has key, store {
+        struct MyData has key, store {
         value: u8
-    }
+        }
 
-    fun init_module(sender: &signer) {
-	 // here we can initialise the data
-	
+        fun init_module(sender: &signer) {
+        // here we can initialise the data
+        }
     }
-  }
-  ```
+    ```
 
 2. Compile your code with:
     ```bash
