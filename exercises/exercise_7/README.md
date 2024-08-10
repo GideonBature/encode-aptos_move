@@ -5,7 +5,11 @@
 
 2. Send some APT to one of your colleagues.
 
-3. List the modules owned by your account, if you don't have any follow exercise 6 to deploy a module.
+3. List the modules owned by your account, if you don't have any follow [exercise 6](https://github.com/GideonBature/encode-aptos_move/tree/main/exercises/exercise_6) to deploy a module.
+
+    ```bash
+    aptos account list --query resources --account default
+    ```
 
 4. Add a view function to your module which will return the value field of the TokenAsset resource.
 
