@@ -1,0 +1,16 @@
+[package]
+name = "homework5"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "0x9e5cccd94f60191a189438d153c0dbf2386be5b45895183a27a2709e18343869"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "testnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
