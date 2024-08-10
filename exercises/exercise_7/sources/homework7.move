@@ -1,6 +1,7 @@
 module bene::homework7 {
 
     use std::signer;
+    use std::debug;
 
     struct TokenAsset has key {
         value: u64,
@@ -23,7 +24,7 @@ module bene::homework7 {
         tokenAsset
     }
 
-    public fun view_Asset(account: &signer): u64 acquires TokenAsset {
+    public entry fun view_Asset(account: &signer): u64 acquires TokenAsset {
         let tokenAsset = borrow_global<TokenAsset>(signer::address_of(account));
         tokenAsset.value
     }

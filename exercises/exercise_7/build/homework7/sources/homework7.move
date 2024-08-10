@@ -23,8 +23,8 @@ module bene::homework7 {
         tokenAsset
     }
 
-    public fun view_Asset(account: &signer): u64 acquires TokenAsset {
-        let tokenAssetValue = borrow_global<TokenAsset>(signer::address_of(account));
-        tokenAssetValue.value
+    public entry fun view_Asset(account: &signer): u64 acquires TokenAsset {
+        let tokenAsset = borrow_global<TokenAsset>(signer::address_of(account));
+        tokenAsset.value
     }
 }
