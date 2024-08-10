@@ -33,11 +33,11 @@
     ```move
     module 0xcafe::h4 {
         struct MyData has key, store {
-        value: u8
+            value: u8
         }
 
         fun init_module(sender: &signer) {
-        // here we can initialise the data
+            // here we can initialise the data
         }
     }
     ```
