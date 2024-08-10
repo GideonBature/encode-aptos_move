@@ -1,7 +1,6 @@
 module bene::homework7 {
 
     use std::signer;
-    use std::debug;
 
     struct TokenAsset has key {
         value: u64,
