@@ -16,4 +16,18 @@
 
 4. Go through the components, and entry functions and view functions, make sure you understand what they are doing.
 
+### Fix
 
+* Error:
+
+```bash
+... error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
+```
+
+* Fix:
+```bash
+wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+```
+```bash
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+```
