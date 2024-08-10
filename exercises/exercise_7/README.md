@@ -22,5 +22,11 @@
 6. Interact with this module using the CLI to.
     
     1. Create a Token Asset with value 42.
+        ```bash
+        aptos move run --function-id <the-address-you-published-to>::<module_name>::<function_name> --args u64:42
+        ```
     
     2. Call the view function you created.
+        ```bash
+        aptos move run --function-id <the-address-you-published-to>::<module_name>::<function_name> --args address:<the-address-you-published-to>
+        ```
