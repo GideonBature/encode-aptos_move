@@ -3,7 +3,7 @@
 
 1. Complete this `gist` to create a normal object.
     ```move
-        module my_addr::h9 {
+    module my_addr::h9 {
         use aptos_framework::object;
         use std::signer;
         use std::string::{String}; 
