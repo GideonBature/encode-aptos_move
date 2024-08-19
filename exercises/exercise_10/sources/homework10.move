@@ -20,11 +20,12 @@ module addr::homework10 {
     // public fun emit_example_object_created_event(my_object: address) {
     //     event::emit<ExampleObjectCreatedEvent>(ExampleObjectCreatedEvent { my_object });
     // }
+    const NAME: vector<u8> = b"ObjectNumber10";
 
     public entry fun create_example_object(user: &signer, name: String, balance: u64) {
         let caller_address = signer::address_of(user);
     
-        let constructor_ref = object::create_object(caller_address);
+        let constructor_ref = object::create_named_object(user, NAME);
 
         let object_signer = object::generate_signer(&constructor_ref);
 
@@ -36,6 +37,13 @@ module addr::homework10 {
         event::emit<ExampleObjectCreatedEvent>(ExampleObjectCreatedEvent {
             my_object: object::address_from_constructor_ref(&constructor_ref),
         });
+    }
+
+    #[view]
+    public fun view_object_address(user: &signer): address {
+        let caller_address = signer::address_of(user);
+        let object_address = object::create_object_address(&caller_address, NAME);
+        object_address
     }
 
 }
