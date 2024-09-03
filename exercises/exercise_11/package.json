@@ -1,0 +1,16 @@
+{
+  "name": "exercise_11",
+  "version": "1.0.0",
+  "description": "## SIMPLE NFT CLIENT",
+  "main": "src/homework11.ts",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
